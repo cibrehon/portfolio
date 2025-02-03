@@ -1,0 +1,329 @@
+/* General Styling */
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between; /* Space out the title and nav */
+    align-items: center; /* Vertically align the title and nav items */
+    margin: 0px;
+    padding: 0 20px; /* Added padding for spacing */
+}
+
+header h1 {
+    margin: 0; /* Remove any extra margin */
+    font-size: 1.8em; /* Smaller font size */
+    padding: 0; /* Ensure no padding is added */
+}
+
+/* Navigation Section */
+nav {
+    display: flex; /* Use flex to align nav items horizontally */
+    align-items: center; /* Vertically align the items in the nav */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Arrange items in a row */
+}
+
+nav ul li {
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+/* Section Styling */
+section {
+    padding: 0 20px;
+    text-align: left;
+}
+
+section h2 {
+    font-size: 1.4em; /* Smaller font size */
+}
+
+/* Portfolio Item Styling */
+.portfolio-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    flex: 1 1 calc(25% - 10px);
+    box-sizing: border-box;
+    margin: 5px;
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Navigation Arrows and Counter */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.navigation .prev, .navigation .next {
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+}
+
+#image-count {
+    color: white;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f0f0f0; /* Lighter grey */
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Button Styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .portfolio-item {
+        flex: 1 1 calc(50% - 10px); /* 2 items per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex: 1 1 calc(100% - 10px); /* 1 item per row on mobile devices */
+    }
+}
+
+/* Centering Images in Portfolio Area */
+.selected-images {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.selected-images .image-container {
+    display: inline-block;
+    position: relative;
+}
+
+.selected-images img {
+    max-width: 100%;
+    height: auto;
+}
+
+.selected-images .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.selected-images .prev,
+.selected-images .next {
+    cursor: pointer;
+    font-size: 1.5em;
+    margin: 0 10px;
+}
+
+/* Images in Portfolio Page */
+.images-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.images-container .image-container {
+    display: inline-block;
+    position: relative;
+}
+
+.images-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Horizontal Separator Line */
+.hr-separator {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    background-image: linear-gradient(to right, #eee, #ccc, #eee);
+    margin: 20px 0;
+}
+
+/* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    align-self: center;
+    margin-top: 20px;
+}
+
+/* Social Media Section */
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media img {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.social-media a {
+    font-size: 1.2em;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Bio Section Styling */
+#bio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+#bio > div {
+    padding: 20px;
+}
+
+#bio h2 {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 1.4em; /* Smaller font size */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#bio h3 {
+    margin-top: 20px;
+    font-size: 1.2em; /* Smaller font size */
+    color: #333;
+}
+
+#bio p {
+    line-height: 1.6;
+    margin-top: 10px;
+    font-size: 0.9em; /* Smaller font size */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex: 1 1 calc(100% - 10px); /* 1 item per row on mobile devices */
+    }
+
+    #bio {
+        grid-template-columns: 1fr; /* 1 column on mobile devices */
+    }
+
+    #bio h2 {
+        grid-column: span 1;
+    }
+}

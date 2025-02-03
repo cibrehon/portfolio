@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGE ILICAK Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <!-- Ensure the path to styles.css is correct -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 20px;
+        }
+        header h1 {
+            font-size: 1.5em; /* Smaller font size for the page title */
+        }
+        nav ul li a {
+            font-size: 0.9em; /* Smaller font size for navigation links */
+        }
+        section h2 {
+            font-size: 1.2em; /* Smaller font size for section titles */
+        }
+        .social-media img {
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+        footer {
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0;
+        }
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .image-grid img {
+            width: 25%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">EGE ILICAK</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#bio">Bio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-item" onclick="showImages(0)">
+                <img src="https://cdn.jsdelivr.net/gh/cibrehon/your-repo@main/path/to/image1.jpg" alt="Portfolio 1">
+                <p>Individuals</p>
+            </div>
+            <div class="portfolio-item" onclick="showImages(1)">
+                <img src="https://cdn.jsdelivr.net/gh/cibrehon/your-repo@main/path/to/image2.jpg" alt="Portfolio 2">
+                <p>Light and Shadow</p>
+            </div>
+            <div class="portfolio-item" onclick="showImages(2)">
+                <img src="https://cdn.jsdelivr.net/gh/cibrehon/your-repo@main/path/to/image3.jpg" alt="Portfolio 3">
+                <p>Life Today</p>
+            </div>
+            <div class="portfolio-item" onclick="showImages(3)">
+                <img src="https://cdn.jsdelivr.net/gh/cibrehon/your-repo@main/path/to/image4.jpg" alt="Portfolio 4">
+                <p>Dreams from a Northern Country</p>
+            </div>
+        </div>
+        <div id="selected-images" class="selected-images">
+        </div>
+        <div class="image-grid" id="images-container">
+            <!-- Images will be dynamically inserted here -->
+        </div>
+    </section>
+    <section id="bio">
+    <h2>Bio</h2>
+    <div>
+        <h3>About</h3>
+        <p>Ege Ilıcak (b. 1988, Ankara, Türkiye) is a street photographer based in Heidelberg, Germany.
+        After completing his studies at Bilkent University, Department of Information Systems and Technologies, Ege developed his passion for photography and chose it as a second profession alongside his engineering work. 
+        Ege's work can be found in private collections across the world and has been featured in international photography magazines in the UK and Germany. In 2021, he took master classes from Yael Martinez at Magnum Photos in Paris. 
+        Ege is the winner of Leica Gallery Frankfurt Photography competitions of 2022 and 2023.
+        He continues to capture the local frames of life.</p>
+    </div>
+    <div>
+        <h3>Awards</h3>
+        <p>Winner of the annual Leica Gallery Photography Competition - Frankfurt am Main, Germany, 2023<br>
+        Winner of the annual Leica Gallery Photography Competition - Frankfurt am Main, Germany, 2022</p>
+    </div>
+    <div>
+        <h3>Exhibitions</h3>
+        <p>2025 | Unite Ortak Mekan, Ankara, Türkiye<br>
+        2024 | Leica Gallery Frankfurt, Frankfurt am Main, Germany<br>
+        2023 | Leica Gallery Frankfurt, Frankfurt am Main, Germany<br>
+        2022 | Steinturnhalle, Leonberg, Germany<br>
+        2022 | Eurythmeum, Stuttgart, Germany - Professional printing sponsored by Das Forum der Kulturen Stuttgart e. V.<br>
+        2017 | Human in Motion - OFF//FOTO Festival - Heidelberg, Germany</p>
+    </div>
+    <div>
+        <h3>Publications</h3>
+        <p>ARALIK MAG<br>
+        Interview by Esra Akyol  - Türkiye, 2022<br><br>
+        IN MAGAZIN<br>
+        SOMOS Ensemble Zwiegespräch Project  - Germany, 2022<br><br>
+        PROFESSIONAL PHOTO MAGAZINE<br>
+        Issue No. 185 - Pro Talk Interview  - United Kingdom, 2021<br><br>
+        AFFINITY SPOTLIGHT MAGAZINE<br>
+        Interview by Jess Johnston  - United Kingdom, 2021</p>
+    </div>
+</section>
+
+    <hr class="hr-separator">
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="social-media">
+            <p>You can reach me via: <a href="mailto:egeilicak@gmail.com">egeilicak@gmail.com</a></p>
+            <p>Follow me on Instagram for more updates:
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 30px; height: 30px;">
+                <a href="https://www.instagram.com/local.frames" target="_blank">
+                    Local.Frames
+                </a>
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>Ege Ilicak © All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
