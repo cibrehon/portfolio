@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EGE ILICAK Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-    <!-- Ensure the path to styles.css is correct -->
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -49,9 +48,9 @@
         <h1><a href="index.html">EGE ILICAK</a></h1>
         <nav>
             <ul>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#bio">Bio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="/index.html#portfolio">Portfolio</a></li>
+                <li><a href="/index.html#bio">Bio</a></li>
+                <li><a href="/index.html#contact">Contact</a></li>
             </ul>
         </nav>
         <button class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</button>
@@ -59,10 +58,9 @@
 
     <div class="mobile-nav" id="mobileNav">
         <button class="close-btn" onclick="toggleMobileNav()">✖</button>
-        <a href="#home" onclick="toggleMobileNav()">Home</a>
-        <a href="#portfolio" onclick="toggleMobileNav()">Portfolio</a>
-        <a href="#bio" onclick="toggleMobileNav()">Bio</a> <!-- Added Bio link -->
-        <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+        <a href="/index.html#portfolio" onclick="toggleMobileNav()">Portfolio</a>
+        <a href="/index.html#bio" onclick="toggleMobileNav()">Bio</a>
+        <a href="/index.html#contact" onclick="toggleMobileNav()">Contact</a>
     </div>
 
     <section id="portfolio">
@@ -93,41 +91,41 @@
     </section>
     <hr class="hr-separator" style="border: 0.25px solid lightgrey;">
     <section id="bio">
-    <h2>Bio</h2>
-    <div>
-        <h3>About</h3>
-        <p>Ege Ilıcak (b. 1988, Ankara, Türkiye) is a street photographer based in Heidelberg, Germany.
-        After completing his studies at Bilkent University, Department of Information Systems and Technologies, Ege developed his passion for photography and chose it as a second profession alongside his engineering work. 
-        Ege's work can be found in private collections across the world and has been featured in international photography magazines in the UK and Germany. In 2021, he took master classes from Yael Martinez at Magnum Photos in Paris. 
-        Ege is the winner of Leica Gallery Frankfurt Photography competitions of 2022 and 2023.
-        He continues to capture the local frames of life.</p>
-    </div>
-    <div>
-        <h3>Awards</h3>
-        <p>Winner of the annual Leica Gallery Photography Competition - Frankfurt am Main, Germany, 2023<br>
-        Winner of the annual Leica Gallery Photography Competition - Frankfurt am Main, Germany, 2022</p>
-    </div>
-    <div>
-        <h3>Exhibitions</h3>
-        <p>2025 | Unite Ortak Mekan, Ankara, Türkiye<br>
-        2024 | Leica Gallery Frankfurt, Frankfurt am Main, Germany<br>
-        2023 | Leica Gallery Frankfurt, Frankfurt am Main, Germany<br>
-        2022 | Steinturnhalle, Leonberg, Germany<br>
-        2022 | Eurythmeum, Stuttgart, Germany - Professional printing sponsored by Das Forum der Kulturen Stuttgart e. V.<br>
-        2017 | Human in Motion - OFF//FOTO Festival - Heidelberg, Germany</p>
-    </div>
-    <div>
-        <h3>Publications</h3>
-        <p>ARALIK MAG<br>
-        Interview by Esra Akyol  - Türkiye, 2022<br><br>
-        IN MAGAZIN<br>
-        SOMOS Ensemble Zwiegespräch Project  - Germany, 2022<br><br>
-        PROFESSIONAL PHOTO MAGAZINE<br>
-        Issue No. 185 - Pro Talk Interview  - United Kingdom, 2021<br><br>
-        AFFINITY SPOTLIGHT MAGAZINE<br>
-        Interview by Jess Johnston  - United Kingdom, 2021</p>
-    </div>
-</section>
+        <h2>Bio</h2>
+        <div>
+            <h3>About</h3>
+            <p>Ege Ilıcak (b. 1988, Ankara, Türkiye) is a street photographer based in Heidelberg, Germany.
+            After completing his studies at Bilkent University, Department of Information Systems and Technologies, Ege developed his passion for photography and chose it as a second profession alongside his engineering work. 
+            Ege's work can be found in private collections across the world and has been featured in international photography magazines in the UK and Germany. In 2021, he took master classes from Yael Martinez at Magnum Photos in Paris. 
+            Ege is the winner of Leica Gallery Frankfurt Photography competitions of 2022 and 2023.
+            He continues to capture the local frames of life.</p>
+        </div>
+        <div>
+            <h3>Awards</h3>
+            <p>Winner of the annual Leica Gallery Photography Competition - Frankfurt am Main, Germany, 2023<br>
+            Winner of the annual Leica Gallery Photography Competition - Frankfurt am Main, Germany, 2022</p>
+        </div>
+        <div>
+            <h3>Exhibitions</h3>
+            <p>2025 | Unite Ortak Mekan, Ankara, Türkiye<br>
+            2024 | Leica Gallery Frankfurt, Frankfurt am Main, Germany<br>
+            2023 | Leica Gallery Frankfurt, Frankfurt am Main, Germany<br>
+            2022 | Steinturnhalle, Leonberg, Germany<br>
+            2022 | Eurythmeum, Stuttgart, Germany - Professional printing sponsored by Das Forum der Kulturen Stuttgart e. V.<br>
+            2017 | Human in Motion - OFF//FOTO Festival - Heidelberg, Germany</p>
+        </div>
+        <div>
+            <h3>Publications</h3>
+            <p>ARALIK MAG<br>
+            Interview by Esra Akyol  - Türkiye, 2022<br><br>
+            IN MAGAZIN<br>
+            SOMOS Ensemble Zwiegespräch Project  - Germany, 2022<br><br>
+            PROFESSIONAL PHOTO MAGAZINE<br>
+            Issue No. 185 - Pro Talk Interview  - United Kingdom, 2021<br><br>
+            AFFINITY SPOTLIGHT MAGAZINE<br>
+            Interview by Jess Johnston  - United Kingdom, 2021</p>
+        </div>
+    </section>
 
     <hr class="hr-separator" style="border: 0.25px solid lightgrey;">
 
@@ -147,5 +145,15 @@
         <p>Ege Ilicak © All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        function toggleMobileNav() {
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav.style.display === 'flex') {
+                mobileNav.style.display = 'none';
+            } else {
+                mobileNav.style.display = 'flex';
+            }
+        }
+    </script>
 </body>
 </html>

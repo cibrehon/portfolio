@@ -17,7 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0; /* Added margin-top for more spacing */
+    margin: 20px 0;
     padding: 0 20px;
 }
 
@@ -110,8 +110,8 @@ section {
 }
 
 section h2 {
-    font-size: 1.2em; /* Reduced font-size for smaller title */
-    margin-top: 40px; /* Added margin-top for more spacing */
+    font-size: 1.2em;
+    margin-top: 40px;
 }
 
 /* Portfolio Item Styling */
@@ -175,7 +175,7 @@ section h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Added spacing between elements */
+    gap: 10px;
 }
 
 .navigation .prev,
@@ -186,7 +186,7 @@ section h2 {
     border: none;
     color: inherit;
     display: inline-block;
-    position: static; /* Removed absolute positioning */
+    position: static;
 }
 
 #image-count {
@@ -335,7 +335,7 @@ form button {
 .social-media {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 40px; /* Added margin-bottom for extra vertical space */
+    margin-bottom: 40px;
 }
 
 .social-media img {
@@ -349,7 +349,7 @@ form button {
     text-decoration: none;
 }
 
-.social-media a:hover {
+social-media a:hover {
     text-decoration: underline;
 }
 

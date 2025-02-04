@@ -1,50 +1,34 @@
 const portfolioItems = [
     {
         images: [
-            "https://via.placeholder.com/600x400?text=Individuals+1",
-            "https://via.placeholder.com/600x400?text=Individuals+2",
-            "https://via.placeholder.com/600x400?text=Individuals+3"
+            // Add actual image URLs here
         ],
         descriptions: [
-            "Description for Individuals 1",
-            "Description for Individuals 2",
-            "Description for Individuals 3"
+            // Add actual descriptions here
         ]
     },
     {
         images: [
-            "https://via.placeholder.com/600x400?text=Light+and+Shadow+1",
-            "https://via.placeholder.com/600x400?text=Light+and+Shadow+2",
-            "https://via.placeholder.com/600x400?text=Light+and+Shadow+3"
+            // Add actual image URLs here
         ],
         descriptions: [
-            "Description for Light and Shadow 1",
-            "Description for Light and Shadow 2",
-            "Description for Light and Shadow 3"
+            // Add actual descriptions here
         ]
     },
     {
         images: [
-            "https://via.placeholder.com/600x400?text=Life+Today+1",
-            "https://via.placeholder.com/600x400?text=Life+Today+2",
-            "https://via.placeholder.com/600x400?text=Life+Today+3"
+            // Add actual image URLs here
         ],
         descriptions: [
-            "Description for Life Today 1",
-            "Description for Life Today 2",
-            "Description for Life Today 3"
+            // Add actual descriptions here
         ]
     },
     {
         images: [
-            "https://via.placeholder.com/600x400?text=Dreams+from+a+Northern+Country+1",
-            "https://via.placeholder.com/600x400?text=Dreams+from+a+Northern+Country+2",
-            "https://via.placeholder.com/600x400?text=Dreams+from+a+Northern+Country+3"
+            // Add actual image URLs here
         ],
         descriptions: [
-            "Description for Dreams from a Northern Country 1",
-            "Description for Dreams from a Northern Country 2",
-            "Description for Dreams from a Northern Country 3"
+            // Add actual descriptions here
         ]
     }
 ];
@@ -108,3 +92,28 @@ function toggleMobileNav() {
         mobileNav.style.display = 'flex';
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slideshow img');
+    const totalSlides = slides.length;
+
+    function showSlides() {
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active');
+            slide.style.opacity = '0';
+        });
+
+        slideIndex++;
+        if (slideIndex > totalSlides) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].classList.add('active');
+        slides[slideIndex - 1].style.opacity = '1';
+
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    showSlides();
+});

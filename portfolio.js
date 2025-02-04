@@ -103,3 +103,12 @@ function updateImageCount() {
     const imageCountElement = document.getElementById('image-count');
     imageCountElement.textContent = `${currentSlideIndex + 1} / ${images.length}`;
 }
+
+function toggleMobileNav() {
+    const mobileNav = document.getElementById('mobileNav');
+    if (mobileNav.style.display === 'flex') {
+        mobileNav.style.display = 'none';
+    } else {
+        mobileNav.style.display = 'flex';
+    }
+}

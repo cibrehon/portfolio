@@ -12,12 +12,19 @@
         <h1><a href="index.html">EGE ILICAK</a></h1>
         <nav>
             <ul>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#bio">Bio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="/index.html#portfolio">Portfolio</a></li>
+                <li><a href="/index.html#bio">Bio</a></li>
+                <li><a href="/index.html#contact">Contact</a></li>
             </ul>
         </nav>
+        <button class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</button>
     </header>
+    <div class="mobile-nav" id="mobileNav">
+        <button class="close-btn" onclick="toggleMobileNav()">✖</button>
+        <a href="/index.html#portfolio" onclick="toggleMobileNav()">Portfolio</a>
+        <a href="/index.html#bio" onclick="toggleMobileNav()">Bio</a>
+        <a href="/index.html#contact" onclick="toggleMobileNav()">Contact</a>
+    </div>
     <section id="portfolio-images">
         <div id="images-container" class="images-container"></div>
         <div id="slideshow-container" class="slideshow-container">
@@ -38,5 +45,15 @@
         <p>Ege Ilicak © All rights reserved.</p>
     </footer>
     <script src="portfolio.js"></script>
+    <script>
+        function toggleMobileNav() {
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav.style.display === 'flex') {
+                mobileNav.style.display = 'none';
+            } else {
+                mobileNav.style.display = 'flex';
+            }
+        }
+    </script>
 </body>
 </html>
