@@ -6,17 +6,6 @@
     <title>Portfolio Images</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            margin: 20px;
-        }
-        header h1 {
-            font-size: 1.5em; /* Smaller font size for the page title */
-        }
-        nav ul li a {
-            font-size: 0.9em; /* Smaller font size for navigation links */
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -31,6 +20,16 @@
     </header>
     <section id="portfolio-images">
         <div id="images-container" class="images-container"></div>
+        <div id="slideshow-container" class="slideshow-container">
+            <div class="slideshow">
+                <img id="slideshow-image" src="" alt="Slideshow Image" class="large-image">
+            </div>
+            <div class="navigation">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <span id="image-count">1 / 1</span>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
     </section>
     <section id="project-description">
         <!-- Dynamic content will be inserted here -->

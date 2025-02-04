@@ -99,3 +99,12 @@ function updatePortfolioContent() {
         </div>
     `;
 }
+
+function toggleMobileNav() {
+    const mobileNav = document.getElementById('mobileNav');
+    if (mobileNav.style.display === 'flex') {
+        mobileNav.style.display = 'none';
+    } else {
+        mobileNav.style.display = 'flex';
+    }
+}

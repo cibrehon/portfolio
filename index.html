@@ -39,6 +39,9 @@
             width: 25%;
             height: auto;
         }
+        .portfolio-item img {
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
     </style>
 </head>
 <body>
@@ -51,7 +54,17 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</button>
     </header>
+
+    <div class="mobile-nav" id="mobileNav">
+        <button class="close-btn" onclick="toggleMobileNav()">✖</button>
+        <a href="#home" onclick="toggleMobileNav()">Home</a>
+        <a href="#portfolio" onclick="toggleMobileNav()">Portfolio</a>
+        <a href="#bio" onclick="toggleMobileNav()">Bio</a> <!-- Added Bio link -->
+        <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+    </div>
+
     <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="portfolio-container">
@@ -78,6 +91,7 @@
             <!-- Images will be dynamically inserted here -->
         </div>
     </section>
+    <hr class="hr-separator" style="border: 0.25px solid lightgrey;">
     <section id="bio">
     <h2>Bio</h2>
     <div>
@@ -115,7 +129,7 @@
     </div>
 </section>
 
-    <hr class="hr-separator">
+    <hr class="hr-separator" style="border: 0.25px solid lightgrey;">
 
     <section id="contact">
         <h2>Contact</h2>

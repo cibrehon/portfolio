@@ -3,36 +3,41 @@ body {
     font-family: 'IBM Plex Mono', monospace;
     background-color: white;
     color: black;
-    margin: 0;
+    margin: 20px;
     padding: 0;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Header Section */
 header {
     display: flex;
-    justify-content: space-between; /* Space out the title and nav */
-    align-items: center; /* Vertically align the title and nav items */
-    margin: 0px;
-    padding: 0 20px; /* Added padding for spacing */
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0; /* Added margin-top for more spacing */
+    padding: 0 20px;
 }
 
 header h1 {
-    margin: 0; /* Remove any extra margin */
-    font-size: 1.8em; /* Smaller font size */
-    padding: 0; /* Ensure no padding is added */
+    margin: 0;
+    font-size: 1.5em;
+    padding: 0;
 }
 
 /* Navigation Section */
 nav {
-    display: flex; /* Use flex to align nav items horizontally */
-    align-items: center; /* Vertically align the items in the nav */
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Arrange items in a row */
+    display: flex;
 }
 
 nav ul li {
@@ -43,7 +48,59 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: black;
+    font-size: 0.9em;
+}
+
+/* Mobile Navigation Styling */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    padding-top: 60px;
+}
+
+.mobile-nav a {
+    padding: 10px 20px;
+    text-decoration: none;
     font-size: 1.2em;
+    color: black;
+    display: block;
+}
+
+.mobile-nav a:hover {
+    background-color: #ddd;
+}
+
+/* Mobile Navigation Toggle Button */
+.mobile-nav-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: inherit;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Close Button for Mobile Navigation */
+.mobile-nav .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: inherit;
 }
 
 /* Section Styling */
@@ -53,7 +110,8 @@ section {
 }
 
 section h2 {
-    font-size: 1.4em; /* Smaller font size */
+    font-size: 1.2em; /* Reduced font-size for smaller title */
+    margin-top: 40px; /* Added margin-top for more spacing */
 }
 
 /* Portfolio Item Styling */
@@ -115,24 +173,28 @@ section h2 {
 /* Navigation Arrows and Counter */
 .navigation {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    gap: 10px; /* Added spacing between elements */
 }
 
-.navigation .prev, .navigation .next {
+.navigation .prev,
+.navigation .next {
     cursor: pointer;
-    color: white;
-    font-size: 24px;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: inherit;
+    display: inline-block;
+    position: static; /* Removed absolute positioning */
 }
 
 #image-count {
-    color: white;
+    font-size: 1.2em;
 }
 
 /* Footer Styling */
 footer {
-    background-color: #f0f0f0; /* Lighter grey */
     color: black;
     text-align: center;
     padding: 10px 0;
@@ -162,13 +224,21 @@ button:hover {
 /* Media Queries for Responsive Design */
 @media (max-width: 1024px) {
     .portfolio-item {
-        flex: 1 1 calc(50% - 10px); /* 2 items per row on tablets */
+        flex: 1 1 calc(50% - 10px);
     }
 }
 
 @media (max-width: 768px) {
     .portfolio-item {
-        flex: 1 1 calc(100% - 10px); /* 1 item per row on mobile devices */
+        flex: 1 1 calc(100% - 10px);
+    }
+
+    nav {
+        display: none;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
     }
 }
 
@@ -247,7 +317,8 @@ form label {
     font-weight: bold;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -264,6 +335,7 @@ form button {
 .social-media {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 40px; /* Added margin-bottom for extra vertical space */
 }
 
 .social-media img {
@@ -277,7 +349,7 @@ form button {
     text-decoration: none;
 }
 
-social-media a:hover {
+.social-media a:hover {
     text-decoration: underline;
 }
 
@@ -296,34 +368,64 @@ social-media a:hover {
 #bio h2 {
     grid-column: span 2;
     text-align: center;
-    font-size: 1.4em; /* Smaller font size */
+    font-size: 1.4em;
     color: #333;
     margin-bottom: 20px;
 }
 
 #bio h3 {
     margin-top: 20px;
-    font-size: 1.2em; /* Smaller font size */
+    font-size: 1.2em;
     color: #333;
 }
 
 #bio p {
     line-height: 1.6;
     margin-top: 10px;
-    font-size: 0.9em; /* Smaller font size */
+    font-size: 0.9em;
 }
 
-/* Media Queries for Responsive Design */
+/* Responsive Bio Section */
 @media (max-width: 768px) {
     .portfolio-item {
-        flex: 1 1 calc(100% - 10px); /* 1 item per row on mobile devices */
+        flex: 1 1 calc(100% - 10px);
     }
 
     #bio {
-        grid-template-columns: 1fr; /* 1 column on mobile devices */
+        grid-template-columns: 1fr;
     }
 
     #bio h2 {
         grid-column: span 1;
     }
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    display: none;
+}
+
+.slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+}
+
+/* Large Images in Portfolio */
+.large-image {
+    max-width: 80%;
+    max-height: 80vh;
+    height: auto;
+    margin: auto;
+    display: block;
+    object-fit: contain;
+    width: 100%;
 }
