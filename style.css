@@ -429,3 +429,17 @@ social-media a:hover {
     object-fit: contain;
     width: 100%;
 }
+
+.scroll-arrow {
+    font-size: 2em;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 10%; /* Adjust this value as needed */
+    background-color: white; /* Ensure visibility */
+}
+
+img:hover {
+    cursor: pointer;
+}

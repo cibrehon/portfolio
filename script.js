@@ -117,3 +117,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     showSlides();
 });
+
+function toggleMobileNav() {
+    const mobileNav = document.getElementById('mobileNav');
+    if (mobileNav.style.display === 'flex') {
+        mobileNav.style.display = 'none';
+    } else {
+        mobileNav.style.display = 'flex';
+    }
+}
+
+function scrollToBio() {
+    document.getElementById('bio').scrollIntoView({ behavior: 'smooth' });
+}
+
+

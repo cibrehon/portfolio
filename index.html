@@ -6,42 +6,6 @@
     <title>EGE ILICAK Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            margin: 20px;
-        }
-        header h1 {
-            font-size: 1.5em; /* Smaller font size for the page title */
-        }
-        nav ul li a {
-            font-size: 0.9em; /* Smaller font size for navigation links */
-        }
-        section h2 {
-            font-size: 1.2em; /* Smaller font size for section titles */
-        }
-        .social-media img {
-            vertical-align: middle;
-            margin-left: 10px;
-        }
-        footer {
-            color: black;
-            text-align: center;
-            padding: 10px 0;
-            width: 100%;
-            bottom: 0;
-        }
-        .image-grid {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .image-grid img {
-            width: 25%;
-            height: auto;
-        }
-        .portfolio-item img {
-            cursor: pointer; /* Change cursor to pointer on hover */
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -89,7 +53,12 @@
             <!-- Images will be dynamically inserted here -->
         </div>
     </section>
-    <hr class="hr-separator" style="border: 0.25px solid lightgrey;">
+  
+    <div style="text-align: center; margin-top: 5%;">
+        <button onclick="scrollToBio()" class="scroll-arrow">
+            &#x2193;
+        </button>
+    </div>
     <section id="bio">
         <h2>Bio</h2>
         <div>
@@ -145,15 +114,6 @@
         <p>Ege Ilicak © All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
-    <script>
-        function toggleMobileNav() {
-            const mobileNav = document.getElementById('mobileNav');
-            if (mobileNav.style.display === 'flex') {
-                mobileNav.style.display = 'none';
-            } else {
-                mobileNav.style.display = 'flex';
-            }
-        }
-    </script>
+
 </body>
 </html>
