@@ -21,7 +21,7 @@ These images, gathered from various corners of the world, seem to depict the ine
         title: 'Life Today',
         description: `Life Today
 The story of everyday life on the streets, capturing both the beauty and complexity of public society and culture.`,
-        imageCount: 36
+        imageCount: 43
     },
     {
         folder: 'images/4',
