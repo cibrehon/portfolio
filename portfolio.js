@@ -8,7 +8,7 @@ Solitude is a truth we all know but few of us are willing to embrace. In the noi
 These images, gathered from various corners of the world, seem to depict the inevitable fate of individuals: solitude. Sometimes in the shadow of towering buildings, other times in a desolate alleyway; each person lost within themselves, enclosed in a world of their own. Yet isn’t that sense of being lost also a sign of profound awareness? When a person is alone, they are most truly with themselves. And perhaps, this confrontation makes them more present than anyone else.
 
 “Individuals - An Ode to Solitude” brings this reality to light. In each photograph, solitude emerges not as a question but as an acceptance. These images may not tell stories, but each one points to a deeper truth.`,
-        imageCount: 19
+        imageCount: 21
     },
     {
         folder: 'images/2',
@@ -21,7 +21,7 @@ These images, gathered from various corners of the world, seem to depict the ine
         title: 'Life Today',
         description: `Life Today
 The story of everyday life on the streets, capturing both the beauty and complexity of public society and culture.`,
-        imageCount: 12
+        imageCount: 36
     },
     {
         folder: 'images/4',

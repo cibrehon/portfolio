@@ -116,6 +116,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     showSlides();
+
+    // Add touch event listeners for mobile swipe gestures
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    function handleGesture() {
+        if (touchEndX < touchStartX) {
+            // Swipe left
+            slideIndex++;
+            if (slideIndex > totalSlides) {
+                slideIndex = 1;
+            }
+        }
+        if (touchEndX > touchStartX) {
+            // Swipe right
+            slideIndex--;
+            if (slideIndex < 1) {
+                slideIndex = totalSlides;
+            }
+        }
+        showSlides();
+    }
+
+    document.addEventListener('touchstart', function(event) {
+        touchStartX = event.changedTouches[0].screenX;
+    }, false);
+
+    document.addEventListener('touchend', function(event) {
+        touchEndX = event.changedTouches[0].screenX;
+        handleGesture();
+    }, false);
 });
 
 function toggleMobileNav() {
