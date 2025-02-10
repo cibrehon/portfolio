@@ -13,14 +13,13 @@ These images, gathered from various corners of the world, seem to depict the ine
     {
         folder: 'images/2',
         title: 'Light and Shadow',
-        description: `Light and Shadow series reflects on the profound impact of time and the passion of capturing the fleeting moment through photography. The dynamic interplay between light and shadow invites a reflection on the transient and the lost. Each frame is an effort to freeze time, a part of a continuous journey through it. The photographs taken in different parts of the world over the past years—both indoors and outdoors—immerse the viewer in the moment as every passing instant transforms into a shadow.`,
+        description: `Light and Shadow series reflect on the profound impact of time and the passion of capturing the fleeting moment through photography. The dynamic interplay between light and shadow invites a reflection on the transient and the lost. Each frame is an effort to freeze time, a part of a continuous journey through it. The photographs taken in different parts of the world over the past years—both indoors and outdoors—immerse the viewer in the moment as every passing instant transforms into a shadow.`,
         imageCount: 18
     },
     {
         folder: 'images/3',
         title: 'Life Today',
-        description: `Life Today
-The story of everyday life on the streets, capturing both the beauty and complexity of public society and culture.`,
+        description: `“Often people ask what I’m photographing, which is a hard question to answer. And the best what I’ve come up with is I just say: Life today.” - William Eggleston`,
         imageCount: 43
     },
     {
