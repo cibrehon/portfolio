@@ -240,6 +240,13 @@ button:hover {
     .mobile-nav-toggle {
         display: block;
     }
+
+    .portfolio-item img,
+    .images-container img,
+    .selected-images img {
+        margin: 0;
+        width: 100%;
+    }
 }
 
 /* Centering Images in Portfolio Area */
@@ -397,6 +404,13 @@ social-media a:hover {
 
     #bio h2 {
         grid-column: span 1;
+    }
+
+    .portfolio-item img,
+    .images-container img,
+    .selected-images img {
+        margin: 0;
+        width: 100%;
     }
 }
 
