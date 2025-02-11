@@ -381,3 +381,8 @@ a {
 img:hover {
     cursor: pointer;
 }
+
+/* Centering Contact Title */
+#contact h2 {
+    text-align: center;
+}
