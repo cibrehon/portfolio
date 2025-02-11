@@ -1,32 +1,25 @@
 const portfolioItems = [
     {
         folder: 'images/1',
-        title: 'Individuals',
-        description: `An Ode to Solitude
-Solitude is a truth we all know but few of us are willing to embrace. In the noisy chaos of cities, amidst the ceaseless hustle of crowded streets, there are those who retreat to a corner, cloaked in their own silence. This project traces the overlooked presence of those silent individuals. Each frame captures a moment where solitude stands exposed in its entirety. The city changes, the geography shifts, but solitude remains the same, unadorned and sharp wherever we encounter it.
+        title: 'Individuals - An Ode to Solitude',
+        description: `Solitude is a truth we all know but few of us are willing to embrace. In the noisy chaos of cities, amidst the ceaseless hustle of crowded streets, there are those who retreat to a corner, cloaked in their own silence. This project traces the overlooked presence of those silent individuals. Each frame captures a moment where solitude stands exposed in its entirety. The city changes, the geography shifts, but solitude remains the same, unadorned and sharp wherever we encounter it.
 
 These images, gathered from various corners of the world, seem to depict the inevitable fate of individuals: solitude. Sometimes in the shadow of towering buildings, other times in a desolate alleyway; each person lost within themselves, enclosed in a world of their own. Yet isn’t that sense of being lost also a sign of profound awareness? When a person is alone, they are most truly with themselves. And perhaps, this confrontation makes them more present than anyone else.
 
 “Individuals - An Ode to Solitude” brings this reality to light. In each photograph, solitude emerges not as a question but as an acceptance. These images may not tell stories, but each one points to a deeper truth.`,
-        imageCount: 21
+        imageCount: 19
     },
     {
         folder: 'images/2',
         title: 'Light and Shadow',
         description: `Light and Shadow series reflect on the profound impact of time and the passion of capturing the fleeting moment through photography. The dynamic interplay between light and shadow invites a reflection on the transient and the lost. Each frame is an effort to freeze time, a part of a continuous journey through it. The photographs taken in different parts of the world over the past years—both indoors and outdoors—immerse the viewer in the moment as every passing instant transforms into a shadow.`,
-        imageCount: 18
+        imageCount: 19
     },
     {
         folder: 'images/3',
-        title: 'Life Today',
+        title: 'Life Today - Color Street Photography',
         description: `“Often people ask what I’m photographing, which is a hard question to answer. And the best what I’ve come up with is I just say: Life today.” - William Eggleston`,
-        imageCount: 43
-    },
-    {
-        folder: 'images/4',
-        title: 'Dreams from a Northern Country',
-        description: `This series traces the quiet pulse of Russia, where time flows like winter rivers—slow, heavy, and unyielding. Mist and frost blur the boundaries of space, creating a world that feels half-remembered, half-imagined. Each image is a fragment of a dreamscape: barren fields bathed in soft glow, weathered faces lost in thought, and the silent poetry of empty roads. These moments speak of a timeless solitude, vast yet intimate, cold yet full of life.​​​​​​​“Dreams from a Northern Country” is an ode to the intangible—a place between reality and reverie.`,
-        imageCount: 20
+        imageCount: 40
     },
     // ...other portfolio items...
 ];
@@ -77,6 +70,15 @@ function showSlideshow(folder, imageCount, startIndex) {
     // Add event listener to the slideshow image to show the next image on click
     slideshowImage.addEventListener('click', () => {
         changeSlide(1);
+    });
+
+    // Add event listeners for arrow keys to navigate through the slideshow
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight') {
+            changeSlide(1);
+        } else if (event.key === 'ArrowLeft') {
+            changeSlide(-1);
+        }
     });
 }
 

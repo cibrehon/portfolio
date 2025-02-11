@@ -1,6 +1,6 @@
 /* General Styling */
 body {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Helvetica Neue', sans-serif;
     background-color: white;
     color: black;
     margin: 20px;
@@ -17,7 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0;
+    margin: 30px 0;
     padding: 0 20px;
 }
 
@@ -370,7 +370,7 @@ a {
     background: none;
     border: none;
     cursor: pointer;
-    margin-top: 10%; /* Adjust this value as needed */
+    margin-top: 5%; /* Adjust this value as needed */
     background-color: white; /* Ensure visibility */
 }
 
