@@ -80,6 +80,28 @@ function showSlideshow(folder, imageCount, startIndex) {
             changeSlide(-1);
         }
     });
+
+    // Add touch event listeners for swipe gestures
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    slideshowImage.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].screenX;
+    });
+
+    slideshowImage.addEventListener('touchend', (event) => {
+        touchEndX = event.changedTouches[0].screenX;
+        handleGesture();
+    });
+
+    function handleGesture() {
+        if (touchEndX < touchStartX) {
+            changeSlide(1); // Swipe left
+        }
+        if (touchEndX > touchStartX) {
+            changeSlide(-1); // Swipe right
+        }
+    }
 }
 
 function loadImages(imageCount) {
