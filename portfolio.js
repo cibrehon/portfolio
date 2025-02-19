@@ -19,7 +19,13 @@ These images, gathered from various corners of the world, seem to depict the ine
         folder: 'images/3',
         title: 'Life Today - Color Street Photography',
         description: `“Often people ask what I’m photographing, which is a hard question to answer. And the best what I’ve come up with is I just say: Life today.” - William Eggleston`,
-        imageCount: 40
+        imageCount: 30
+    },
+    {
+        folder: 'images/4',
+        title: 'Faces of Cuba',
+        description: `In December 2012, Fidel Castro is still alive. Cuba still lives like in the 1950s. I take a plane to Havana; and my journey starts here. Followed by Pinar del Rio and Trinidad. “Love happens in the street, standing in the dust of saloons and public squares: the flower dies the day it’s born.” - José Martí`,
+        imageCount: 15
     },
     // ...other portfolio items...
 ];
