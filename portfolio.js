@@ -88,10 +88,12 @@ function showSlideshow(folder, imageCount, startIndex) {
     document.querySelector('.slideshow-container').style.display = 'block';
     updateImageCount();
 
-    // Add event listener to the slideshow image to show the next image on click
-    slideshowImage.addEventListener('click', () => {
-        changeSlide(1);
-    });
+    // On non-touch devices, add click event to move to next slide
+    if (!('ontouchstart' in window)) {
+        slideshowImage.addEventListener('click', () => {
+            changeSlide(1);
+        });
+    }
 
     // Add event listeners for arrow keys to navigate through the slideshow
     document.addEventListener('keydown', (event) => {
@@ -116,6 +118,9 @@ function showSlideshow(folder, imageCount, startIndex) {
     });
 
     function handleGesture() {
+        const swipeThreshold = 30; // Minimum pixels to trigger a swipe
+        const distance = Math.abs(touchEndX - touchStartX);
+        if (distance < swipeThreshold) return; // Ignore simple taps
         if (touchEndX < touchStartX) {
             changeSlide(1); // Swipe left
         }
