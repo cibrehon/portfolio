@@ -24,8 +24,22 @@ These images, gathered from various corners of the world, seem to depict the ine
     {
         folder: 'images/4',
         title: 'Faces of Cuba',
-        description: `In December 2012, Fidel Castro is still alive. Cuba still lives like in the 1950s. I take a plane to Havana; and my journey starts here. Followed by Pinar del Rio and Trinidad. “Love happens in the street, standing in the dust of saloons and public squares: the flower dies the day it’s born.” - José Martí`,
+        description: `In December 2012, Fidel Castro is still alive. Cuba still lives like in the 1950s. I take a plane to Havana; and my journey starts here. Followed by Pinar del Rio and Trinidad. 
+        
+        “Love happens in the street, standing in the dust of saloons and public squares: the flower dies the day it’s born.” - José Martí`,
         imageCount: 15
+    },
+    {
+        folder: 'images/5',
+        title: 'In Ankara, In Color',
+        description: `When one thinks of Turkey, the first thing that comes to mind is Istanbul, followed by the Aegean and Mediterranean coasts. When it comes to street photography, however, Istanbul is almost the only destination. For years, the winning or finalist images in many prestigious international photography competitions have come from this city. This is no coincidence, of course. Connecting Asia to Europe, hosting empires and states for centuries, and offering a wealth of architecture and multicultural heritage, Istanbul is a city filled with visual stories at every corner. Masters like Alex Webb and Ara Güler dedicated years to its streets, immortalizing its magical atmosphere through their photo books.
+  
+
+But what about the capital, Ankara? Situated in the heart of Anatolia, this young city, where the foundations of the Republic were laid, remains unfamiliar to many abroad. It is a city away from tourists, mostly home to locals and diplomats. In Turkey, it is often referred to as the “City of Civil Servants,” known for its closer friendships and simpler way of life. Yet, when it comes to street photography, Ankara is almost never mentioned.
+  
+
+For the past few years, I have been bringing to life an idea that has been on my mind for a long time: Introducing Ankara to the world of street photography. I am photographing this city—where I was born, raised, graduated from university, and built countless memories—with “the fresh eye of a street photographer.” Since 2022, I have been returning to my hometown whenever possible, exploring Ankara’s streets with my camera. The series *In Ankara, In Color* captures the people of this city, its neighborhoods that host diverse sociological structures, and its essence through the eyes of a local.`,
+        imageCount: 54
     },
     // ...other portfolio items...
 ];
@@ -48,8 +62,9 @@ function updateProjectDescription(title, description) {
     const projectTitle = document.createElement('h2');
     const projectDescription = document.createElement('p');
     projectTitle.textContent = title;
-    projectDescription.textContent = description;
-
+    // Convert newlines to <br> tags for breaks in description.
+    projectDescription.innerHTML = description.replace(/\n/g, '<br>');
+    
     const projectDescriptionSection = document.getElementById('project-description');
     projectDescriptionSection.innerHTML = ''; // Clear existing content
     projectDescriptionSection.appendChild(projectTitle);

@@ -121,7 +121,7 @@ section h2 {
 }
 
 .portfolio-item {
-    flex: 1 1 calc(25% - 10px);
+    flex: 1 1 calc(33.33% - 10px);
     box-sizing: border-box;
     margin: 5px;
     text-align: center;
@@ -130,6 +130,11 @@ section h2 {
 .portfolio-item img {
     max-width: 100%;
     height: auto;
+}
+
+/* New project styling */
+.portfolio-item.in-ankara-in-color {
+    /* Add any specific styles for the new project here */
 }
 
 /* Navigation Arrows and Counter */
