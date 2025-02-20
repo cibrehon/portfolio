@@ -141,3 +141,49 @@ function toggleMobileNav() {
         mobileNav.style.display = 'flex';
     }
 }
+
+function toggleThumbnails() {
+    const slideshowImage = document.getElementById('slideshow-image');
+    const navigation = document.querySelector('.navigation');
+    const thumbnailsContainer = document.getElementById('thumbnails-container');
+    if (thumbnailsContainer.style.display === 'none') {
+        slideshowImage.style.display = 'none';
+        navigation.style.display = 'none';
+        thumbnailsContainer.style.display = 'flex';
+        displayThumbnails(); // Ensure thumbnails are displayed
+    } else {
+        slideshowImage.style.display = 'block';
+        navigation.style.display = 'flex';
+        thumbnailsContainer.style.display = 'none';
+    }
+}
+
+function displayThumbnails() {
+    const thumbnailsContainer = document.getElementById('thumbnails-container');
+    thumbnailsContainer.innerHTML = ''; // Clear existing thumbnails
+    images.forEach((imageSrc, index) => {
+        const thumbnail = document.createElement('img');
+        thumbnail.src = imageSrc;
+        thumbnail.classList.add('thumbnail');
+        thumbnail.onload = () => {
+            if (thumbnail.naturalHeight > thumbnail.naturalWidth) {
+                thumbnail.classList.add('vertical');
+            }
+        };
+        thumbnail.onclick = () => showSlide(index);
+        thumbnailsContainer.appendChild(thumbnail);
+    });
+
+}
+
+function showSlide(index) {
+    currentSlideIndex = index;
+    document.getElementById('slideshow-image').src = images[currentSlideIndex];
+    updateImageCount();
+    // Show the slideshow and hide the thumbnails
+    document.getElementById('slideshow-image').style.display = 'block';
+    document.querySelector('.navigation').style.display = 'flex';
+    document.getElementById('thumbnails-container').style.display = 'none';
+    document.getElementById('thumbnail-toggle').textContent = 'Index';
+    document.getElementById('thumbnail-toggle').style.display = 'block';
+}

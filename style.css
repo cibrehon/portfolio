@@ -174,13 +174,27 @@ footer {
 button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 0px;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
     background-color: lightgray;
+}
+
+#thumbnail-toggle {
+    background-color: transparent;
+    color: black;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.1em; /* Make text larger */
+}
+
+#thumbnail-toggle:hover {
+    text-decoration: underline;
 }
 
 /* Media Queries for Responsive Design */
@@ -385,4 +399,21 @@ img:hover {
 /* Centering Contact Title */
 #contact h2 {
     text-align: center;
+}
+
+/* Thumbnails Styling */
+.thumbnails-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: left;
+    align-items: flex-start; /* Ensure all items align at the top */
+}
+
+.thumbnail {
+    width: calc(100% / 5 - 10px); /* Width equal to page width divided by 5, minus gap */
+    object-fit: cover;
+    cursor: pointer;
+    align-self: center;
 }
