@@ -184,6 +184,9 @@ button:hover {
   .portfolio-item {
     flex: 1 1 calc(100% - 10px);
   }
+  .portfolio-container {
+    grid-template-columns: 1fr; /* Show 1 column on small screens */
+  }
   nav {
     display: none;
   }
